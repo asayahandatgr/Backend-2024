@@ -12,7 +12,7 @@ Route::get('/user', function (Request $request) {
 Route::get('/animals', [AnimalController::class, 'index']);
 
 // Untuk Menambah Data
-Route::post('/animals/store', [AnimalController::class, 'store']);
+Route::post('/animals', [AnimalController::class, 'store']);
 
 // Untuk Mengupdate Data
 Route::put('/animals/{id}', [AnimalController::class, 'update']);

@@ -42,7 +42,7 @@ class AnimalController extends Controller
     {
         if (isset($this->animal[$id])) {
             unset($this->animal[$id]);
-            return array_values($this->animal);
+            return $this->animal;
         }
         
         return 'Hewan tidak ditemukan';
