@@ -6,7 +6,7 @@ setTimeout(function () {
 
 console.log("Tiga");
 
-console.log("Edo Membuka Bowser Google Chrome.");
+console.log("Tegar Membuka Bowser Google Chrome.");
 
 /**
  * setTimeout salah satu operasi Asynchronous.
@@ -18,4 +18,4 @@ setTimeout(() => {
   console.log("Download complete");
 }, 5000);
 
-console.log("Edo membuka Youtube.");
+console.log("Tegar membuka Youtube.");
