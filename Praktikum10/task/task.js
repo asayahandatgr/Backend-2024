@@ -4,7 +4,7 @@
  */
 function showDownload(result) {
   console.log("Download selesai");
-  console.log("Hasil Download: " + result);
+  console.log(`Hasil Download: ${result}`);
 }
 
 /**
@@ -18,11 +18,17 @@ function download(callShowDownload) {
   }, 3000);
 }
 
-download(showDownload);
+// Menggunakan Promise dan Async/Await
+function downloadFile() {
+  return new Promise(function (resolve) {
+    download(resolve);
+  });
+}
 
-/**
- * TODO:
- * - Refactor callback ke Promise atau Async Await
- * - Refactor function ke ES6 Arrow Function
- * - Refactor string ke ES6 Template Literals
- */
+async function startDownload() {
+  console.log("Memulai download...");
+  const result = await downloadFile();
+  showDownload(result);
+}
+
+startDownload();
